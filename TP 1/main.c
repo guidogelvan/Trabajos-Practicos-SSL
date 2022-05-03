@@ -2,24 +2,25 @@
 #include <stdio.h>
 #include <ctype.h>
 
+
+
 int main(){
-    char c;
-
+        int c;
+      
     printf("Ingrese un caracter: ");
-    c = getchar();
     
-
+while((c = getchar()) != '\n' && c != EOF){
     if(islower(c)){
-        putchar(toupper(c));
+     putchar(toupper(c));
+        
     } 
     else if(isupper(c)){
-        putchar(tolower(c));
+       putchar(tolower(c));
 
     }else if(isdigit(c)){
     }else{
        putchar(c);
     }
-
-    
+}
     return 0;
 }
